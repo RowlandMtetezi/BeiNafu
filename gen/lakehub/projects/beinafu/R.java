@@ -27,13 +27,18 @@ public final class R {
         public static final int action_settings=0x7f080000;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
+        public static final int activity_electronics_technology=0x7f030000;
+        public static final int activity_house_lifestyle=0x7f030001;
+        public static final int activity_main=0x7f030002;
+        public static final int activity_mobile_phones=0x7f030003;
+        public static final int activity_splash_screen=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f070000;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
+        public static final int app_description=0x7f050003;
         public static final int app_name=0x7f050000;
         public static final int welcome_message=0x7f050002;
     }
