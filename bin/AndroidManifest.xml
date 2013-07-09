@@ -30,6 +30,8 @@
         <activity android:name="lakehub.projects.beinafu.ElectronicsTechnology"></activity>
         <activity android:name="lakehub.projects.beinafu.HouseLifestyle"></activity>
         <activity android:name="lakehub.projects.beinafu.MapRetail"></activity>
+        <provider android:name="BeiNafuProvider"
+            android:authorities="lakehub.projects.data.BeiNafuProvider"></provider>
     </application>
 
 </manifest>

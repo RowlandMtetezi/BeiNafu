@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
+//import android.widget.TextView;
 import android.view.View;
 
 public class Main extends Activity {
@@ -24,11 +24,11 @@ public class Main extends Activity {
         
         menuList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         	public void onItemClick(AdapterView<?> parent, View itemClicked,int position, long id){
-        		TextView textView = (TextView) itemClicked;
-        		String strText = textView.getText().toString();
+        		//TextView textView = (TextView) itemClicked;
+        		//String strText = textView.getText().toString();
         		//if (strText.equalsIgnoreCase(getResources().getString(
         	}
-		});
+		}); 
     }
 
 
