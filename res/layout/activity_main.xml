@@ -3,49 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background"
     android:orientation="vertical"
-    tools:ignore="ContentDescription" >
+    tools:ignore="ContentDescription"
+    android:padding="5dp" >
 
     <RelativeLayout
         android:id="@+id/RelativeLayout01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
-
-        <ImageView
-            android:id="@+id/ImageView_MenuHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:src="@drawable/quizicon" >
-        </ImageView>
-
+        
         <TextView
             android:id="@+id/TextView01"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_gravity="fill_horizontal|center"
-            android:shadowColor="@android:color/white"
             android:shadowDx="0"
             android:shadowDy="0"
             android:shadowRadius="10"
             android:text="@string/menu"
-            android:textColor="@color/title_color"
             android:textSize="@dimen/screen_title_size" >
         </TextView>
 
-        <ImageView
-            android:id="@+id/ImageView_MenuHeader2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_gravity="right|center_vertical"
-            android:src="@drawable/quizicon" >
-        </ImageView>
     </RelativeLayout>
 
     <RelativeLayout
@@ -53,23 +33,15 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
 
-        <ImageView
-            android:id="@+id/ImageView_MenuBottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:scaleType="fitEnd"
-            android:src="@drawable/bottom" >
-        </ImageView>
-
         <ListView
             android:id="@+id/ListView_Menu"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:divider="@drawable/divider"
-            android:listSelector="@drawable/textured" >
+            android:divider="@drawable/divider">
         </ListView>
+
     </RelativeLayout>
 
 </LinearLayout>
