@@ -21,7 +21,7 @@ public class SplashScreen extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_splash_screen);
+		setContentView(R.layout.activity_splash_screen);		//calling the activity_splash_screen.xml to view
 	}
 	
 	@Override
@@ -53,7 +53,7 @@ public class SplashScreen extends Activity {
         fade2.setAnimationListener(new AnimationListener() {
             public void onAnimationEnd(Animation animation) {
                 // The animation has ended, transition to the Main Menu screen
-            	startActivity(new Intent(SplashScreen.this, Main.class));
+            	startActivity(new Intent(SplashScreen.this, Main.class));  	//we could type com.lakehub.beinafuu.Main
                 SplashScreen.this.finish();
             }
 

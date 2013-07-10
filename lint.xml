@@ -3,4 +3,5 @@
     <issue id="ExportedContentProvider">
         <ignore path="AndroidManifest.xml" />
     </issue>
+    <issue id="HardcodedText" severity="ignore" />
 </lint>
