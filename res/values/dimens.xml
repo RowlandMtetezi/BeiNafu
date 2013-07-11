@@ -7,6 +7,7 @@
 	<dimen name="logo_size">15pt</dimen>
     <dimen name="version_size">5pt</dimen>
     <dimen name="version_spacing">3pt</dimen>
-    <dimen name="screen_title_size">10pt</dimen>
+    <dimen name="screen_title_size">13pt</dimen>
     <dimen name="menu_item_size">10pt</dimen>
+    <dimen name="electonics_top">10pt</dimen>
 </resources>

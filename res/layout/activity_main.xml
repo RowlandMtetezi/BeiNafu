@@ -5,13 +5,22 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     tools:ignore="ContentDescription"
-    android:padding="5dp" >
+    android:padding="5dp"
+    android:background="@android:color/black" >
 
     <RelativeLayout
         android:id="@+id/RelativeLayout01"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-        
+        android:layout_height="wrap_content"
+         android:orientation="horizontal" >
+        <ImageView
+                android:id="@+id/homeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeicon"
+                tools:ignore="ContentDescription" >
+
+        </ImageView>
         <TextView
             android:id="@+id/TextView01"
             android:layout_width="fill_parent"
@@ -23,7 +32,11 @@
             android:shadowDy="0"
             android:shadowRadius="10"
             android:text="@string/menu"
-            android:textSize="@dimen/screen_title_size" >
+            android:textSize="@dimen/screen_title_size"
+            android:textColor="@color/main_color_fore"
+            android:background="@color/main_color" 
+            android:layout_toRightOf="@id/homeImage"
+            android:padding="10dp" >
         </TextView>
 
     </RelativeLayout>
@@ -31,15 +44,15 @@
     <RelativeLayout
         android:id="@+id/RelativeLayout02"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="fill_parent"
+        android:background="@color/list_color" >
 
         <ListView
             android:id="@+id/ListView_Menu"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            >
+            android:layout_alignParentTop="true" >
         </ListView>
 
     </RelativeLayout>

@@ -16,7 +16,11 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
+        public static final int item_color=0x7f05000a;
+        public static final int list_color=0x7f050009;
         public static final int logo_color=0x7f050000;
+        public static final int main_color=0x7f050007;
+        public static final int main_color_fore=0x7f050008;
         public static final int menu_color=0x7f050005;
         public static final int menu_glow=0x7f050006;
         public static final int title_color=0x7f050003;
@@ -33,6 +37,7 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f060000;
         public static final int activity_vertical_margin=0x7f060001;
+        public static final int electonics_top=0x7f060007;
         public static final int logo_size=0x7f060002;
         public static final int menu_item_size=0x7f060006;
         public static final int screen_title_size=0x7f060005;
@@ -43,30 +48,36 @@ public final class R {
         public static final int background=0x7f020000;
         public static final int bottom=0x7f020001;
         public static final int divider=0x7f020002;
-        public static final int house=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int maps=0x7f020005;
-        public static final int phones=0x7f020006;
-        public static final int quizicon=0x7f020007;
-        public static final int tech=0x7f020008;
-        public static final int textured=0x7f020009;
+        public static final int homeicon=0x7f020003;
+        public static final int house=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int maps=0x7f020006;
+        public static final int phones=0x7f020007;
+        public static final int quizicon=0x7f020008;
+        public static final int tech=0x7f020009;
+        public static final int textured=0x7f02000a;
     }
     public static final class id {
-        public static final int ImageView2_Left=0x7f0a0007;
-        public static final int ImageView2_Right=0x7f0a0008;
-        public static final int ImageView3_Left=0x7f0a000a;
-        public static final int ImageView3_Right=0x7f0a000b;
-        public static final int ListView_Menu=0x7f0a0003;
-        public static final int RelativeLayout01=0x7f0a0000;
-        public static final int RelativeLayout02=0x7f0a0002;
-        public static final int TableLayout01=0x7f0a0005;
-        public static final int TableRow01=0x7f0a0006;
-        public static final int TableRow02=0x7f0a0009;
-        public static final int TextView01=0x7f0a0001;
-        public static final int TextViewBottomTitle=0x7f0a000c;
-        public static final int TextViewBottomVersion=0x7f0a000d;
-        public static final int TextViewTopTitle=0x7f0a0004;
-        public static final int action_settings=0x7f0a000e;
+        public static final int ImageView2_Left=0x7f0a000c;
+        public static final int ImageView2_Right=0x7f0a000d;
+        public static final int ImageView3_Left=0x7f0a000f;
+        public static final int ImageView3_Right=0x7f0a0010;
+        public static final int ListView_Menu=0x7f0a0006;
+        public static final int RelativeLayout01=0x7f0a0002;
+        public static final int RelativeLayout02=0x7f0a0005;
+        public static final int TableLayout01=0x7f0a000a;
+        public static final int TableRow01=0x7f0a000b;
+        public static final int TableRow02=0x7f0a000e;
+        public static final int TextView01=0x7f0a0004;
+        public static final int TextViewBottomTitle=0x7f0a0011;
+        public static final int TextViewBottomVersion=0x7f0a0012;
+        public static final int TextViewTopTitle=0x7f0a0009;
+        public static final int action_settings=0x7f0a0013;
+        public static final int homeImage=0x7f0a0003;
+        public static final int topElectronicTitle=0x7f0a0000;
+        public static final int topHouseTitle=0x7f0a0001;
+        public static final int topMapTitle=0x7f0a0007;
+        public static final int topMobilePhoneTitle=0x7f0a0008;
     }
     public static final class layout {
         public static final int activity_electronics_technology=0x7f030000;
@@ -86,11 +97,15 @@ public final class R {
         public static final int app_name=0x7f070000;
         public static final int app_version=0x7f07000a;
         public static final int electronics=0x7f070004;
+        public static final int electronics_title=0x7f07000d;
         public static final int houselifestyle=0x7f070005;
+        public static final int houselifestyle_title=0x7f07000e;
         public static final int mapretails=0x7f070007;
+        public static final int mapretails_title=0x7f07000f;
         public static final int menu=0x7f07000b;
         public static final int miscellaneous=0x7f070008;
         public static final int mobilephones=0x7f070006;
+        public static final int mobilephones_title=0x7f070010;
         public static final int test_string=0x7f07000c;
         public static final int title_2=0x7f070009;
         public static final int welcome_message=0x7f070002;

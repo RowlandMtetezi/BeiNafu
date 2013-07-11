@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<MultiAutoCompleteTextView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-    
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
-</MultiAutoCompleteTextView>
+    <TextView
+        android:id="@+id/topHouseTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/houselifestyle_title"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="@dimen/electonics_top" />
+</LinearLayout>

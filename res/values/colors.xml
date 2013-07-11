@@ -7,4 +7,8 @@
      <color name="title_glow">#F00</color>
      <color name="menu_color">#FFFF0F</color>
      <color name="menu_glow">#F00</color>
+     <color name="main_color">#000</color>
+     <color name="main_color_fore">#939598</color>
+     <color name="list_color">#191919</color>
+     <color name="item_color">#939598</color>
 </resources>
