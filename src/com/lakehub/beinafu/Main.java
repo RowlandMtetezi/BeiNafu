@@ -1,19 +1,17 @@
 package com.lakehub.beinafu;
 
-import com.lakehub.beinafu.R;
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-//import android.widget.TextView;
-import android.view.View;
 
 public class Main extends Activity {
-
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +45,9 @@ public class Main extends Activity {
         		else if(strText.equalsIgnoreCase(getResources().getString(R.string.mapretails))){
         			//Launch the House UI
         			startActivity(new Intent(Main.this,MapRetail.class));
+        		}
+        		else if(strText.equals(getResources().getString(R.string.miscellaneous))){
+        			startActivity(new Intent(Main.this,NewItem.class));
         		}
         	}
 		}); 

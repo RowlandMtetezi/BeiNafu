@@ -1,14 +1,17 @@
-
-<TextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_menu_item"
     android:layout_width="fill_parent"
-    android:textSize="@dimen/menu_item_size"
-    android:text="@string/test_string"
-    android:layout_gravity="center_horizontal"
     android:layout_height="wrap_content"
-    android:shadowRadius="5"
     android:gravity="left"
-    android:textColor="@color/item_color"
-    android:shadowDy="3"
-    android:shadowDx="3"
-    android:padding="15dp" />
+    android:padding="15dp"
+    android:shadowRadius="5"
+    android:text="@string/test_string"
+    android:textColor="#7E354D"
+    android:textSize="20dip"
+    android:textStyle="bold"
+    android:typeface="sans"
+    tools:ignore="ObsoleteLayoutParam,ContentDescription,SpUsage"
+    android:drawableRight="@drawable/arrow" >
+
+</TextView>

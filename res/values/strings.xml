@@ -17,4 +17,13 @@
 	<string name="houselifestyle_title"><b>Lifestyle Stuff - On Sale !</b></string>
 	<string name="mapretails_title"><b>Map - Items Location</b></string>
 	<string name="mobilephones_title"><b>Mobile Phones - On Sale !</b></string>
+	<string name="create_item_title"><b>Sell Item</b></string>
+	<string name="item_name"><b>Item Name:</b></string>
+	<string name="seller_name"><b>Item Seller:</b></string>
+	<string name="item_seller_contact"><b>Item Seller Contact:</b></string>
+	<string name="item_price"><b>Item Price (Kshs):</b></string>
+	<string name="item_category"><b>Choose Category:</b></string>
+	<string name="item_location"><b>Seller Location:</b></string>
+	<string name="save_button"><b>Save</b></string>
+	<string name="cancel_button"><b>Cancel</b></string>
 </resources>

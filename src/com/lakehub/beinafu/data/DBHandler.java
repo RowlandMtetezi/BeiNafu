@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import java.util.List;
+import java.util.ArrayList;
 
 public class DBHandler extends SQLiteOpenHelper{
 	// All  variables
@@ -16,7 +18,6 @@ public class DBHandler extends SQLiteOpenHelper{
 
 	// tables
 	protected  final String TABLE_ITEMS= "beinafu_items";
-	protected  final String TABLE_METADATA= "beinafu_metadata";
 	
 	//Items table column names
 	public static final String ITEM_ID = "item_id";
@@ -56,13 +57,102 @@ public class DBHandler extends SQLiteOpenHelper{
 		
 		 // Drop older table if existed
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_ITEMS);
-		db.execSQL("DROP TABLE IF EXISTS " + TABLE_METADATA);
 
 		// Create tables again
 		onCreate(db);
 	}
 	
 	//adding a new item
+	public void addItem(Items item){
+		SQLiteDatabase db = this.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(ITEM_ID , item.getItemID()); 
+		values.put(ITEM_NAME, item.getItemName()); 
+		values.put(ITEM_SELLER, item.getItemSeller()); 
+		values.put(ITEM_SELLER_CONTACT, item.getItemSellerContact()); 
+		values.put(ITEM_PRICE, item.getItemPrice()); 
+		values.put(ITEM_STATUS, item.getStatus()); 
+		values.put(ITEM_CATEGORY, item.getItemCategory()); 
+		values.put(ITEM_LOCATION, item.getItemLocation()); 
+		
+		// Inserting Row
+		db.insert(TABLE_ITEMS, null, values);
+		db.close(); // Closing database connection
+	}
 	
+	//Getting a single item
+	Items getItem(int itemID){
+		SQLiteDatabase db = this.getReadableDatabase();
+		
+		Cursor cursor = db.query(TABLE_ITEMS, new String[] { ITEM_ID,  
+				ITEM_NAME, 
+				ITEM_SELLER,
+				ITEM_SELLER_CONTACT, 
+				ITEM_PRICE,
+				ITEM_CATEGORY,
+				ITEM_STATUS,
+				ITEM_LOCATION}, ITEM_ID + "=?",
+				new String[] { String.valueOf(itemID) }, null, null, null,null);
+		if (cursor != null)
+			cursor.moveToFirst();
+		Items item = new Items(Integer.parseInt(cursor.getString(0)),
+				cursor.getString(1), 
+				cursor.getString(2), 
+				cursor.getString(3),
+				cursor.getString(4), 
+				cursor.getString(5), 
+				cursor.getString(6), 
+				cursor.getString(7));
+		
+		db.close(); // Closing database connection
+		// return issue
+		return item;
+	}
+	
+	//A List of all Items
+	public List<Items> getAllItems(){
+		List<Items> itemsList = new ArrayList<Items>();
+		// Select All Query
+		String selectQuery = "SELECT  * FROM " + TABLE_ITEMS;
+		
+		SQLiteDatabase db = this.getWritableDatabase();
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		
+		// looping through all rows and adding to list
+		if (cursor.moveToFirst()) {
+			do {
+				Items item = new Items();
+				item.setItemID(Integer.parseInt(cursor.getString(0)));
+				item.setItemName(cursor.getString(1));
+				item.setItemSeller(cursor.getString(2));
+				item.setItemSellerContact(cursor.getString(3));
+				item.setItemPrice(cursor.getString(4));
+				item.setItemCategory(cursor.getString(5));
+				item.setItemStatus(cursor.getString(6));
+				item.setItemLocation(cursor.getString(7));
+				// Adding issue to list
+				itemsList.add(item);
+			} while (cursor.moveToNext());
+		}
+		db.close(); // Closing database connection
+		// return issues list
+		return itemsList;
+	}
+	
+	// Updating single issue
+	public int updateItem(Items item) {
+		SQLiteDatabase db = this.getWritableDatabase();
+
+		ContentValues values = new ContentValues();
+		values.put(ITEM_SELLER_CONTACT, item.getItemSellerContact());		
+		values.put(ITEM_CATEGORY, item.getItemCategory());
+
+		// updating row
+		int rowUpdated = db.update(TABLE_ITEMS, values, ITEM_ID + " = ?",
+				new String[] { String.valueOf(item.getItemID()) });
+		
+		db.close();
+		return rowUpdated;
+	}
 	
 }

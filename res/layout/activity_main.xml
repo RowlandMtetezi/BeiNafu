@@ -5,38 +5,26 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     tools:ignore="ContentDescription"
-    android:padding="5dp"
-    android:background="@android:color/black" >
+    android:background="#ffffff" >
 
     <RelativeLayout
         android:id="@+id/RelativeLayout01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:orientation="horizontal" >
-        <ImageView
-                android:id="@+id/homeImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/homeicon"
-                tools:ignore="ContentDescription" >
-
-        </ImageView>
+        android:orientation="horizontal"
+        android:background="@layout/home_bg"  >
+        
         <TextView
             android:id="@+id/TextView01"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_gravity="fill_horizontal|center"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="10"
             android:text="@string/menu"
             android:textSize="@dimen/screen_title_size"
-            android:textColor="@color/main_color_fore"
-            android:background="@color/main_color" 
-            android:layout_toRightOf="@id/homeImage"
-            android:padding="10dp" >
+            android:padding="10dp"
+            android:layout_marginTop="10dip"
+	        android:layout_marginBottom="1dip"  >
         </TextView>
 
     </RelativeLayout>
@@ -45,7 +33,7 @@
         android:id="@+id/RelativeLayout02"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/list_color" >
+        android:background="@layout/rect" >
 
         <ListView
             android:id="@+id/ListView_Menu"
@@ -53,7 +41,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:listSelector="@layout/listselector" > 
+            android:listSelector="@layout/listselector"
+            android:layout_marginTop="2dip"
+            android:divider="#b5b5b5"
+            android:dividerHeight="1dp" > 
         </ListView>
 
     </RelativeLayout>

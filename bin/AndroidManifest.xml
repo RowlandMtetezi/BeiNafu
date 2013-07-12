@@ -29,8 +29,7 @@
         <activity android:name=".ElectronicsTechnology"></activity>
         <activity android:name=".HouseLifestyle"></activity>
         <activity android:name=".MapRetail"></activity>
-        <provider android:name=".data.BeiNafuProvider"
-            android:authorities=".data.BeiNafuProvider"></provider>
+        <activity android:name=".NewItem"></activity>
         </application>
 
 </manifest>
