@@ -64,10 +64,11 @@ public class NewItem extends Activity {
         		String name = txtItemName.getText().toString();
         		String seller = txtItemSeller.getText().toString();
         		String sellerContact = txtItemSellerContact.getText().toString();
+        		String status = "Not Sold";
         		String price = txtItemPrice.getText().toString();
         		String category = String.valueOf(spinner.getSelectedItemPosition() + 1);
         		String location = String.valueOf(spinnerLocation.getSelectedItemPosition() + 1);
-        		db.addItem(new Items(itemID,name,seller,sellerContact,price,"Not Sold",category,location));
+        		db.addItem(new Items(itemID,name,seller,sellerContact,price,status,category,location));
         		Toast.makeText(getApplicationContext(),"New Item added sucessfully, thank you", Toast.LENGTH_LONG).show();
         	}
         });

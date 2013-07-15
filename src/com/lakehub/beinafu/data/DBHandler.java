@@ -81,7 +81,7 @@ public class DBHandler extends SQLiteOpenHelper{
 	}
 	
 	//Getting a single item
-	Items getItem(int itemID){
+	public Items getItem(int itemID){
 		SQLiteDatabase db = this.getReadableDatabase();
 		
 		Cursor cursor = db.query(TABLE_ITEMS, new String[] { ITEM_ID,  

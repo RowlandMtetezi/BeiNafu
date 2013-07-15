@@ -2,14 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
-	<TextView
-        android:id="@+id/topMapTitle"
-        android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_Map_Retail"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/mapretails_title"
-        android:gravity="center"
-        android:padding="10dp"
-        android:textSize="@dimen/electonics_top" />
+        android:orientation="horizontal"
+        android:background="@layout/home_bg" >
+		<TextView
+	        android:id="@+id/topMapTitle"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/mapretails_title"
+	        android:gravity="left"
+	        android:padding="10dip"
+	        android:textSize="@dimen/electonics_top"
+	        android:layout_marginTop="10dip" />
+	</RelativeLayout>
+	<RelativeLayout
+        android:id="@+id/RelativeLayout_map_retails_List"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@layout/rect" >
+		
+	</RelativeLayout>
 </LinearLayout>

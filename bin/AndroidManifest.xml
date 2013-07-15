@@ -30,6 +30,7 @@
         <activity android:name=".HouseLifestyle"></activity>
         <activity android:name=".MapRetail"></activity>
         <activity android:name=".NewItem"></activity>
+        <activity android:name=".SingleItem"></activity>
         </application>
 
 </manifest>

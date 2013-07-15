@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="UnknownIdInLayout" >
+
+	<LinearLayout 
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+		<TextView  
+	        android:id="@+id/viewItemHeader"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"      
+	        android:background="@layout/home_bg" 
+	        android:paddingTop="10dip" 
+	        android:paddingBottom="10dip"
+	        android:text="@string/viewItem"
+	        android:padding="10dip"
+	        android:textSize="@dimen/electonics_top" />
+	</LinearLayout>
+
+	<ScrollView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+	    
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@layout/rect"
+		    android:orientation="vertical">
+	  		
+	  		<!-- Item Number -->
+	  		<TextView android:id="@+id/view_item_id"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:textSize="20sp"      
+	            android:textColor="#000000"
+	            android:text="Item Number :"
+	            android:paddingLeft="5dip" 
+	            android:paddingTop="20dip" 
+	            android:paddingBottom="20dip"        
+	            android:background="@layout/rect" />
+	  
+	  		<!-- Item Name -->
+	  		<TextView android:id="@+id/view_item_name"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#000000"
+	            android:textSize="20sp"  
+	            android:text="Item Name: "
+	            android:paddingLeft="5dip" 
+	            android:paddingTop="20dip" 
+	            android:paddingBottom="20dip"        
+	            android:background="@layout/rect" />
+	  
+	  		<!-- Item Seller -->
+	  		<TextView android:id="@+id/view_item_seller"
+	      		android:layout_width="fill_parent"
+	      		android:layout_height="wrap_content"      		
+	      		android:textColor="#000000"
+	      		android:textSize="20sp"  
+	      		android:text="Item Seller: "
+	      		android:paddingLeft="5dip" 
+	            android:paddingTop="20dip" 
+	            android:paddingBottom="20dip"        
+	            android:background="@layout/rect" />
+	  
+	  		<!-- Item Seller Contact -->
+	  		<TextView android:id="@+id/view_item_seller_contact"
+	      		android:layout_width="fill_parent"
+	      		android:layout_height="wrap_content"      		
+	      		android:textColor="#000000"      		
+	      		android:textSize="20sp"  
+	      		android:text="Item Seller Contact: "
+	      		android:paddingLeft="5dip" 
+	            android:paddingTop="20dip" 
+	            android:paddingBottom="20dip"        
+	            android:background="@layout/rect" />
+	  
+	   		<!-- Item Price -->
+	  		<TextView android:id="@+id/view_item_price"
+	      		android:layout_width="fill_parent"
+	      		android:layout_height="wrap_content"      		
+	      		android:textColor="#000000"
+	      		android:textSize="20sp"  
+	      		android:text="Item Price(Kshs): "
+	      		android:paddingLeft="5dip" 
+	            android:paddingTop="20dip" 
+	            android:paddingBottom="20dip"        
+	            android:background="@layout/rect" /> 
+	        
+	        <!-- Item Status -->
+	  		<TextView android:id="@+id/view_item_status"
+	      		android:layout_width="fill_parent"
+	      		android:layout_height="wrap_content"      		
+	      		android:textColor="#000000"
+	      		android:textSize="20sp"  
+	      		android:text="Item Status: "
+	      		android:paddingLeft="5dip" 
+	            android:paddingTop="20dip" 
+	            android:paddingBottom="20dip"        
+	            android:background="@layout/rect" /> 
+	
+	   		<RelativeLayout
+	       		android:layout_width="match_parent"
+	       		android:layout_height="wrap_content"      
+	        	android:background="@layout/rect" >
+	       
+	       		<TextView
+	           		android:id="@+id/view_item_category"
+	           		android:layout_marginRight="5dip"
+	           		android:layout_width="wrap_content"
+	           		android:layout_height="wrap_content"
+	           		android:textSize="20sp"          
+			        android:paddingLeft="5dip"
+			        android:paddingTop="5dip"
+			        android:text="Item Category: "
+			        android:textColor="#000000" />
+				<TextView
+	           		android:id="@+id/view_item_location"
+	           		android:layout_marginRight="5dip"
+	           		android:layout_width="wrap_content"
+	           		android:layout_height="wrap_content"
+	           		android:textSize="20sp"          
+			        android:paddingLeft="5dip"
+			        android:paddingTop="5dip"
+			        android:text="Item Location: "
+			        android:layout_below="@+id/view_item_category"
+			        android:textColor="#000000"
+			         /> 
+	   		</RelativeLayout>
+	   		<RelativeLayout
+       			android:layout_width="match_parent"
+   				android:layout_height="wrap_content"       
+      			android:background="@layout/rect"> 
+       
+		        <Button
+			      android:id="@+id/btnBuyItem"
+			      android:layout_width="wrap_content"
+			      android:layout_height="wrap_content"
+			      android:layout_centerHorizontal="false"  
+			      android:layout_marginTop="5dip"
+			      android:text="Buy Item"
+			      android:textSize="20sp"   />	       	  		
+			      <requestFocus />
+		  </RelativeLayout>
+	 	</LinearLayout>
+	</ScrollView>
+</LinearLayout>

@@ -2,13 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#ffffff" >
 	
      <RelativeLayout
         android:id="@+id/RelativeLayout_Electronics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:background="@layout/home_bg" >
 	    <TextView
 	        android:id="@+id/topElectronicTitle"
 	        android:layout_width="fill_parent"
@@ -16,12 +18,15 @@
 	        android:text="@string/electronics_title"
 	        android:gravity="left"
 	        android:padding="10dip"
-	        android:textSize="@dimen/electonics_top" />
+	        android:textSize="@dimen/electonics_top"
+            android:layout_marginTop="10dip"
+	        android:layout_marginBottom="1dip" />
 	</RelativeLayout>
 	<RelativeLayout
         android:id="@+id/RelativeLayout_Electronics_List"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="fill_parent"
+        android:background="@layout/rect" >
 		<ListView
             android:id="@+id/ElectronicsView"
             android:layout_width="fill_parent"
@@ -30,7 +35,7 @@
             android:layout_alignParentTop="true"
             android:listSelector="@layout/listselector"
             android:divider="#b5b5b5" 
-            android:layout_marginTop="2dip"> 
+            android:dividerHeight="1dp"> 
         </ListView>
 	</RelativeLayout>
 	    

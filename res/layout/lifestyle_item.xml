@@ -9,8 +9,9 @@
     tools:ignore="SpUsage,ContentDescription" >
 
     <!-- Item Name -->
+
     <TextView
-        android:id="@+id/itemElectronicName"
+        android:id="@+id/itemLifestyleName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Item Name"
@@ -22,65 +23,65 @@
     <!-- Item Seller -->
 
     <TextView
-        android:id="@+id/itemElectronicSeller"
+        android:id="@+id/itemLifestyleSeller"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/itemLifestyleName"
         android:text="Item Seller"
         android:textColor="#7E354D"
         android:textSize="15dip"
         android:textStyle="bold"
-        android:typeface="sans"
-        android:layout_below="@id/itemElectronicName" />
+        android:typeface="sans" />
 
     <!-- Item Price -->
 
     <TextView
-        android:id="@+id/itemElectronicPrice"
+        android:id="@+id/itemLifestylePrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/itemLifestyleSeller"
         android:text="Item Price"
         android:textColor="#7E354D"
         android:textSize="15dip"
         android:textStyle="bold"
-        android:typeface="sans"
-        android:layout_below="@id/itemElectronicSeller" />
+        android:typeface="sans" />
 
     <!-- Seller Contact -->
 
     <TextView
-        android:id="@+id/sellerElectronicContact"
+        android:id="@+id/sellerLifestyleContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/itemLifestylePrice"
         android:text="Seller Contact"
         android:textColor="#7E354D"
         android:textSize="15dip"
         android:textStyle="bold"
-        android:typeface="sans"
-        android:layout_below="@id/itemElectronicPrice" />
+        android:typeface="sans" />
 
     <!-- Seller Location -->
 
     <TextView
-        android:id="@+id/sellerElectronicLocation"
+        android:id="@+id/sellerLifestyleLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/sellerLifestyleContact"
         android:text="Seller Location"
         android:textColor="#7E354D"
         android:textSize="15dip"
         android:textStyle="bold"
-        android:typeface="sans"
-        android:layout_below="@id/sellerElectronicContact" />
-    
+        android:typeface="sans" />
+
     <!-- Item ID -->
-    
+
     <TextView
-        android:id="@+id/item_id"
+        android:id="@+id/item_id_lifestyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"      
-         android:layout_below="@id/sellerElectronicLocation"       
-        android:text="Item ID Not Visible"        
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sellerLifestyleLocation"
+        android:text="Item ID Not Visible"
         android:visibility="gone" />
-    
+
     <ImageView
         android:id="@+id/arrow_selection"
         android:layout_width="wrap_content"

@@ -5,11 +5,13 @@ import java.util.HashMap;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.lakehub.beinafu.data.DBHandler;
 import com.lakehub.beinafu.data.Items;
@@ -25,7 +27,9 @@ public class ElectronicsTechnology extends Activity {
 	static final String ITEM_CATEGORY = "item_category";
 	static final String ITEM_LOCATION = "item_location";
 	
-	
+	private static final String TAG_ITEMID = "item_id";
+	ListView list;
+    LazyAdapter adapter;
 	
 	@Override
 	public void onResume() {
@@ -53,18 +57,24 @@ public class ElectronicsTechnology extends Activity {
 			map.put(ITEM_LOCATION, it.getItemLocation());
 			electronicsItems.add(map);
         }
-        LazyAdapter adapter;
-    	ListView list = (ListView) findViewById(R.id.ElectronicsView);
+        
+    	list = (ListView) findViewById(R.id.ElectronicsView);
 		adapter = new LazyAdapter(this, electronicsItems,"electronics");        
         list.setAdapter(adapter);
         
-     // Click event for single list row
+        //Click event for single list row
         list.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				// getting values from selected ListItem
-				//String itemID= ((TextView) view.findViewById(R.id.issue_id)).getText().toString();
+				//getting values from selected ListItem
+				String itemID= ((TextView)view.findViewById(R.id.item_id)).getText().toString();
+				
+				//Starting new intent
+				Intent in = new Intent(getApplicationContext(), SingleItem.class);
+				
+				in.putExtra(TAG_ITEMID, itemID);
+				startActivity(in);
 			}
         	
         });
