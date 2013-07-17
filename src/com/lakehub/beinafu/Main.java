@@ -21,8 +21,9 @@ public class Main extends Activity {
         		          getResources().getString(R.string.houselifestyle),
         		          getResources().getString(R.string.mobilephones),
         		          getResources().getString(R.string.mapretails),
-        		          getResources().getString(R.string.miscellaneous)};
-        
+        		          getResources().getString(R.string.miscellaneous),
+        		          getResources().getString(R.string.map_tst)};
+         
         ArrayAdapter<String> adpt = new ArrayAdapter<String>(this, R.layout.menu_item,items);
         menuList.setAdapter(adpt);
         
@@ -48,6 +49,9 @@ public class Main extends Activity {
         		}
         		else if(strText.equals(getResources().getString(R.string.miscellaneous))){
         			startActivity(new Intent(Main.this,NewItem.class));
+        		}
+        		else if(strText.equals(getResources().getString(R.string.map_tst))){
+        			startActivity(new Intent(Main.this,MapTest.class));
         		}
         	}
 		}); 

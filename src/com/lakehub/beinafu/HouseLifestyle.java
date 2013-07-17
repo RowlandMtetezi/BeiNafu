@@ -23,7 +23,7 @@ public class HouseLifestyle extends Activity {
 	static final String ITEM_PRICE = "item_price";
 	static final String ITEM_STATUS = "item_status";
 	static final String ITEM_CATEGORY = "item_category";
-	static final String ITEM_LOCATION = "item_location";
+	static final String ITEM_LOCATION = "item_location"; 
 	
 	//private static final String TAG_ITEMID = "item_id";
 	ListView list;

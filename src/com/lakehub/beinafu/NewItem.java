@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class NewItem extends Activity {
@@ -66,9 +67,15 @@ public class NewItem extends Activity {
         		String sellerContact = txtItemSellerContact.getText().toString();
         		String status = "Not Sold";
         		String price = txtItemPrice.getText().toString();
-        		String category = String.valueOf(spinner.getSelectedItemPosition() + 1);
-        		String location = String.valueOf(spinnerLocation.getSelectedItemPosition() + 1);
-        		db.addItem(new Items(itemID,name,seller,sellerContact,price,status,category,location));
+        		//String category = String.valueOf(spinner.getSelectedItemPosition() + 1);
+        		//String location = String.valueOf(spinnerLocation.getSelectedItemPosition() + 1);
+        		
+        		TextView sellerLocationString = (TextView)spinnerLocation.getSelectedView();
+        		String sellerLocation = (String) sellerLocationString.getText();
+        		TextView itemCategoryString = (TextView)spinner.getSelectedView();
+        		String itemCategory = (String)itemCategoryString.getText();
+        		
+        		db.addItem(new Items(itemID,name,seller,sellerContact,price,status,itemCategory,sellerLocation));
         		Toast.makeText(getApplicationContext(),"New Item added sucessfully, thank you", Toast.LENGTH_LONG).show();
         	}
         });

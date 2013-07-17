@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class DBHandler extends SQLiteOpenHelper{
 	// All  variables
-	// Database Version
+	// Database Version 
 	protected  final static int DATABASE_VERSION = 1;
 
 	// Database Name

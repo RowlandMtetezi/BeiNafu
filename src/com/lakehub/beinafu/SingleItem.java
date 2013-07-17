@@ -46,7 +46,7 @@ public class SingleItem extends Activity {
         
         lblItemId.setText("Item Number: " +itemID);
         lblItemName.setText("Item Name: "+itemName);
-        lblItemSeller.setText("Item Seller: " +itemSeller);
+        lblItemSeller.setText("Item Seller: " +itemSeller); 
         lblItemSellerContact.setText("Item Seller Contact: " +itemSellerContact);
         lblItemPrice.setText("Item Price (Kshs): " +itemPrice);
         lblItemStatus.setText("Item Status: " +itemStatus);

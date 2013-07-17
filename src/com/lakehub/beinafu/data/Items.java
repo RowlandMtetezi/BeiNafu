@@ -1,5 +1,5 @@
 package com.lakehub.beinafu.data;
-
+ 
 public class Items {
 	//private variables
 	int item_id;
@@ -8,14 +8,14 @@ public class Items {
 	String item_seller_contact;
 	String item_price;
 	String item_status;
-	String item_category;
+	String item_category;  
 	String item_location;
 	
 	//Empty constructor
 	public Items(){
 		
 	}
-	
+	 
 	//constructor
 	public Items(int itemID, String itemName, String itemSeller, String itemSellerContact, String itemPrice, String itemStatus, String itemCategory, String itemLocation){
 		this.item_id = itemID;

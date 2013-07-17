@@ -27,4 +27,5 @@
 	<string name="save_button"><b>Save</b></string>
 	<string name="cancel_button"><b>Cancel</b></string>
 	<string name="viewItem"><b>View Item</b></string>
+	<string name="map_tst">Map Test</string>
 </resources>

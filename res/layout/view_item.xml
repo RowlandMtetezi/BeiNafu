@@ -78,7 +78,8 @@
 	      		android:paddingLeft="5dip" 
 	            android:paddingTop="20dip" 
 	            android:paddingBottom="20dip"        
-	            android:background="@layout/rect" />
+	            android:background="@layout/rect"
+	            android:autoLink="phone" />
 	  
 	   		<!-- Item Price -->
 	  		<TextView android:id="@+id/view_item_price"
