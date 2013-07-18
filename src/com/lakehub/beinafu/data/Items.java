@@ -10,6 +10,7 @@ public class Items {
 	String item_status;
 	String item_category;  
 	String item_location;
+	String item_date_created;
 	
 	//Empty constructor
 	public Items(){
@@ -17,7 +18,7 @@ public class Items {
 	}
 	 
 	//constructor
-	public Items(int itemID, String itemName, String itemSeller, String itemSellerContact, String itemPrice, String itemStatus, String itemCategory, String itemLocation){
+	public Items(int itemID, String itemName, String itemSeller, String itemSellerContact, String itemPrice, String itemStatus, String itemCategory, String itemLocation, String item_date_created){
 		this.item_id = itemID;
 		this.item_name = itemName;
 		this.item_seller = itemSeller;
@@ -26,6 +27,7 @@ public class Items {
 		this.item_status = itemStatus;
 		this.item_category = itemCategory;
 		this.item_location = itemLocation;
+		this.item_date_created = item_date_created;
 	}
 	
 	/* 
@@ -55,6 +57,9 @@ public class Items {
 	public String getItemLocation(){
 		return this.item_location;
 	}
+	public String getItemDateCreated(){
+		return this.item_date_created;
+	}
 	
 	/* 
 	 * Set variables 
@@ -82,5 +87,8 @@ public class Items {
 	}
 	public void setItemLocation(String itemLocation){
 		this.item_location = itemLocation;
+	}
+	public void setItemDateCreated(String dateCreated){
+		this.item_date_created = dateCreated;
 	}
 }

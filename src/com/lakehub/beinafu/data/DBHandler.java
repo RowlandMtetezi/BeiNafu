@@ -28,6 +28,7 @@ public class DBHandler extends SQLiteOpenHelper{
 	public static final String ITEM_STATUS = "item_status";
 	public static final String ITEM_CATEGORY = "item_category";
 	public static final String ITEM_LOCATION = "item_location";
+	public static final String ITEM_DATE_CREATED = "item_date_created";
 	
 	//Call to the super class to initialize properly
 	public DBHandler(Context context) {
@@ -45,7 +46,8 @@ public class DBHandler extends SQLiteOpenHelper{
 				+ ITEM_PRICE + " TEXT,"
 				+ ITEM_STATUS + " TEXT,"
 				+ ITEM_CATEGORY + " TEXT,"
-				+ ITEM_LOCATION + " TEXT" + ")";
+				+ ITEM_LOCATION + " TEXT," 
+				+ ITEM_DATE_CREATED + " TEXT" + ")";
 		db.execSQL(CREATE_ITEMS_TABLE);
 	}
 	
@@ -74,6 +76,7 @@ public class DBHandler extends SQLiteOpenHelper{
 		values.put(ITEM_STATUS, item.getStatus()); 
 		values.put(ITEM_CATEGORY, item.getItemCategory()); 
 		values.put(ITEM_LOCATION, item.getItemLocation()); 
+		values.put(ITEM_DATE_CREATED, item.getItemDateCreated());
 		
 		// Inserting Row
 		db.insert(TABLE_ITEMS, null, values);
@@ -89,9 +92,11 @@ public class DBHandler extends SQLiteOpenHelper{
 				ITEM_SELLER,
 				ITEM_SELLER_CONTACT, 
 				ITEM_PRICE,
-				ITEM_CATEGORY,
 				ITEM_STATUS,
-				ITEM_LOCATION}, ITEM_ID + "=?",
+				ITEM_CATEGORY,
+				ITEM_LOCATION,
+				ITEM_DATE_CREATED
+				}, ITEM_ID + "=?",
 				new String[] { String.valueOf(itemID) }, null, null, null,null);
 		if (cursor != null)
 			cursor.moveToFirst();
@@ -102,7 +107,8 @@ public class DBHandler extends SQLiteOpenHelper{
 				cursor.getString(4), 
 				cursor.getString(5), 
 				cursor.getString(6), 
-				cursor.getString(7));
+				cursor.getString(7),
+				cursor.getString(8));
 		
 		db.close(); // Closing database connection
 		// return issue
@@ -127,9 +133,10 @@ public class DBHandler extends SQLiteOpenHelper{
 				item.setItemSeller(cursor.getString(2));
 				item.setItemSellerContact(cursor.getString(3));
 				item.setItemPrice(cursor.getString(4));
-				item.setItemCategory(cursor.getString(5));
-				item.setItemStatus(cursor.getString(6));
+				item.setItemStatus(cursor.getString(5));
+				item.setItemCategory(cursor.getString(6));
 				item.setItemLocation(cursor.getString(7));
+				item.setItemDateCreated(cursor.getString(8));
 				// Adding issue to list
 				itemsList.add(item);
 			} while (cursor.moveToNext());

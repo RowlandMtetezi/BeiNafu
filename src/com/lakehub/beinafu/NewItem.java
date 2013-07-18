@@ -1,10 +1,13 @@
 package com.lakehub.beinafu;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 import com.lakehub.beinafu.data.DBHandler;
 import com.lakehub.beinafu.data.Items;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +18,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+@SuppressLint("SimpleDateFormat")
 public class NewItem extends Activity {
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,15 +71,17 @@ public class NewItem extends Activity {
         		String sellerContact = txtItemSellerContact.getText().toString();
         		String status = "Not Sold";
         		String price = txtItemPrice.getText().toString();
-        		//String category = String.valueOf(spinner.getSelectedItemPosition() + 1);
-        		//String location = String.valueOf(spinnerLocation.getSelectedItemPosition() + 1);
         		
+        		//date created
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");					     
+				String datecreated = sdf.format(new Date());
+				
         		TextView sellerLocationString = (TextView)spinnerLocation.getSelectedView();
         		String sellerLocation = (String) sellerLocationString.getText();
         		TextView itemCategoryString = (TextView)spinner.getSelectedView();
         		String itemCategory = (String)itemCategoryString.getText();
         		
-        		db.addItem(new Items(itemID,name,seller,sellerContact,price,status,itemCategory,sellerLocation));
+        		db.addItem(new Items(itemID,name,seller,sellerContact,price,status,itemCategory,sellerLocation,datecreated));
         		Toast.makeText(getApplicationContext(),"New Item added sucessfully, thank you", Toast.LENGTH_LONG).show();
         	}
         });
