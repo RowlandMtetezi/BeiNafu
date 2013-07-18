@@ -12,6 +12,6 @@
     android:textStyle="bold"
     android:typeface="sans"
     tools:ignore="ObsoleteLayoutParam,ContentDescription,SpUsage"
-    android:drawableRight="@drawable/arrow" >
+    android:drawableRight="@drawable/arrow3" >
 
 </TextView>
